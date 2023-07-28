@@ -1,0 +1,9 @@
+1st - Create a Jenkins Scripted pipeline
+This pipeline should do the below tasks
+- it should clone the code from github
+- it should build the code using maven (make sure to integrate the plugins)
+- it should test the code using sonar analysis (use a sonar server - setup sonrqube)
+- it should deploy the code to tomcat (create and setuup tomcat 1st - integrate this in the pipeline - use required plugins)
+
+- Convert the Scripted pipeline into a Declarative script by creating a Jenkinsfile directly in the code repo 
+ 
