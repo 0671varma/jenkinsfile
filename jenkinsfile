@@ -6,7 +6,7 @@ stage('clone')
 {
 steps{
 echo "Cloning the Project.........."
-git clone https://github.com/Ai-TechNov/Food-App.git
+git clone "https://github.com/Ai-TechNov/Food-App.git"
 }
 }
 stage('Test') 
