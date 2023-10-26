@@ -1,30 +1,19 @@
-import jenkins.model.*
-jenkins = Jenkins.instance
-
-pipeline{
-agent any
-stages 
-{
-stage('clone') 
-{
-steps{
-script {
-echo "Cloning the Project.........."
-git clone "https://github.com/Ai-TechNov/Food-App.git"
-}
-}
-}
-stage('Test') 
-{
-steps{
-echo "Testing the Project.........."
-}
-}
-stage('Deploy') 
-{
-steps{
-echo "Deploying the Project.........."
-}
-}
-}
+pipeline {
+   agent any
+   stages {
+    stage('Checkout') {
+      steps {
+        script {
+           // The below will clone your repo and will be checked out to master branch by default.
+           git url: 'https://github.com/Ai-TechNov/Food-App.git'
+           // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
+           sh "ls -lart ./*" 
+           // List all branches in your repo. 
+           sh "git branch -a"
+           // Checkout to a specific branch in your repo.
+           sh "git checkout branchname"
+          }
+       }
+    }
+  }
 }
