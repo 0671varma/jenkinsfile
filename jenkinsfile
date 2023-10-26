@@ -5,9 +5,7 @@ stages
 stage('Clone') 
 {
 steps {
-script {
-           git url:'https://github.com/0671varma/JavaWebCalculator.git'
-          }
+git branch: 'main', credentialsId: 'git-credentials', url: 'https://github.com/0671varma/JavaWebCalculator.git'
        }
     }
 stage('Build') 
