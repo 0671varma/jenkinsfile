@@ -5,14 +5,8 @@ stages
 stage('clone') 
 {
 steps{
-echo "clone the Project.........."
-sudo git clone https://github.com/0671varma/Food-App.git
-}
-}
-stage('Build') 
-{
-steps{
-echo "Building the Project.........."
+echo "Cloning the Project.........."
+git clone https://github.com/Ai-TechNov/Food-App.git
 }
 }
 stage('Test') 
@@ -25,10 +19,6 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
-sudo yum -y install httpd
-sudo mv Food-App/* /var/www/html/
-sudo systemctl start httpd
-
 }
 }
 }
